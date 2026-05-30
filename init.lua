@@ -182,6 +182,7 @@ do
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+  vim.keymap.set('n', '<leader>e', ':Ex<CR>')
 
   --center the cursor when scrolling with control-d and control-u
   vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -350,7 +351,7 @@ do
   --
   -- We first install it from https://github.com/NMAC427/guess-indent.nvim
   -- and then call its `setup()` function to start it with default settings.
-  vim.pack.add({ 'https://github.com/nvim-mini/mini.pairs' })
+  vim.pack.add { 'https://github.com/nvim-mini/mini.pairs' }
   require('mini.pairs').setup()
 
   vim.pack.add { gh 'tpope/vim-fugitive' }
@@ -413,6 +414,12 @@ do
   -- vim.g.everforest_ui_contrast = 'high'
   -- vim.g.everforest_enable_italic = true
   -- vim.cmd.colorscheme 'everforest'
+
+  -- alabaster theme
+  vim.opt.termguicolors = true
+  vim.pack.add { gh 'dchinmay2/alabaster.nvim' }
+  vim.g.alabaster_floatborder = true
+  vim.cmd.colorscheme 'alabaster'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
