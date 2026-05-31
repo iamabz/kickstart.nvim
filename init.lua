@@ -3,7 +3,7 @@
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
-========                                    .-----.          ========
+========     
 ========         .----------------------.   | === |          ========
 ========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
@@ -182,7 +182,7 @@ do
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-  vim.keymap.set('n', '<leader>e', ':Ex<CR>')
+  vim.keymap.set('n', '<leader>e', ':Lex<CR>')
 
   --center the cursor when scrolling with control-d and control-u
   vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -418,8 +418,11 @@ do
   -- alabaster theme
   vim.opt.termguicolors = true
   vim.pack.add { gh 'dchinmay2/alabaster.nvim' }
-  vim.g.alabaster_floatborder = true
-  vim.cmd.colorscheme 'alabaster'
+  --vim.g.alabaster_floatborder = true
+
+  --modus theme
+  vim.pack.add { gh 'dasupradyumna/midnight.nvim' }
+  vim.cmd.colorscheme 'midnight'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
